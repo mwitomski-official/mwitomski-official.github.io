@@ -6,7 +6,7 @@ import script from "./scripts/explorer.inline"
 import { ExplorerNode, FileNode, Options } from "./ExplorerNode"
 
 // Options interface defined in `ExplorerNode` to avoid circular dependency
-const defaultOptions = (): Options => ({
+const defaultOptions = {
   // Title of the explorer component
   title: "Explorer",
   // What happens when you click a folder ("link" to navigate to folder page on click or "collapse" to collapse folder on click)
