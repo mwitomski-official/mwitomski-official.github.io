@@ -7,9 +7,13 @@ import { ExplorerNode, FileNode, Options } from "./ExplorerNode"
 
 // Options interface defined in `ExplorerNode` to avoid circular dependency
 const defaultOptions = (): Options => ({
+  // Title of the explorer component
   title: "Explorer",
+  // What happens when you click a folder ("link" to navigate to folder page on click or "collapse" to collapse folder on click)
   folderClickBehavior: "collapse",
+  // Default state of folders ("collapsed" or "open")
   folderDefaultState: "collapsed",
+  // Wether to use local storage to save "state" (which folders are opened) of explorer
   useSavedState: true,
   // Sort order: folders first, then files. Sort folders and files alphabetically
   sortFn: (a, b) => {

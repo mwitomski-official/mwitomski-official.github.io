@@ -11,6 +11,7 @@ interface RenderComponents {
   head: QuartzComponent
   header: QuartzComponent[]
   beforeBody: QuartzComponent[]
+  afterBody: QuartzComponent[]
   pageBody: QuartzComponent
   left: QuartzComponent[]
   right: QuartzComponent[]
@@ -93,6 +94,7 @@ export function renderPage(
     head: Head,
     header,
     beforeBody,
+    afterBody,
     pageBody: Content,
     left,
     right,
@@ -124,6 +126,7 @@ export function renderPage(
         <div id="quartz-root" class="page">
           <Body {...componentData}>
             {LeftComponent}
+            {RightComponent}
             <div class="center">
               <div class="page-header">
                 <Header {...componentData}>
@@ -138,8 +141,9 @@ export function renderPage(
                 </div>
               </div>
               <Content {...componentData} />
+              <hr />
+              {afterBody?.map((BodyComponent) => <BodyComponent {...componentData} />)}
             </div>
-            {RightComponent}
           </Body>
           <Footer {...componentData} />
         </div>
@@ -149,6 +153,8 @@ export function renderPage(
         .map((res) => JSResourceToScriptElement(res))}
     </html>
   )
+
+  debugger
 
   return "<!DOCTYPE html>\n" + render(doc)
 }
