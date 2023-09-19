@@ -27,11 +27,12 @@ const defaultOptions = (): Options => ({
     }
   },
   order: ["filter", "map", "sort"],
-})
+} satisfies Options
+
 export default ((userOpts?: Partial<Options>) => {
   function Explorer({ allFiles, displayClass, fileData }: QuartzComponentProps) {
     // Parse config
-    const opts: Options = { ...defaultOptions(), ...userOpts }
+    const opts: Options = { ...defaultOptions, ...userOpts }
 
     // Construct tree from allFiles
     const fileTree = new FileNode("")
