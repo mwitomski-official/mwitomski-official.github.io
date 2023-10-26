@@ -33,6 +33,7 @@ export const defaultContentPageLayout: PageLayout = {
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
   ],
+  afterBody: [],
 }
 
 // components for pages that display lists of pages  (e.g. tags or folders)
@@ -45,4 +46,5 @@ export const defaultListPageLayout: PageLayout = {
     Component.Darkmode(),
   ],
   right: [],
+  afterBody: [],
 }
