@@ -1,5 +1,9 @@
-import { slug } from "github-slugger"
+import { slug as slugAnchor } from "github-slugger"
 import type { Element as HastElement } from "hast"
+import rfdc from "rfdc"
+
+export const clone = rfdc()
+
 // this file must be isomorphic so it can't use node libs (e.g. path)
 
 export const QUARTZ = "quartz"
@@ -43,6 +47,16 @@ export function getFullSlug(window: Window): FullSlug {
   return res
 }
 
+function sluggify(s: string): string {
+  return s
+    .split("/")
+    .map((segment) =>
+      segment.replace(/\s/g, "-").replace(/%/g, "-percent").replace(/\?/g, "-q").replace(/#/g, ""),
+    )
+    .join("/") // always use / as sep
+    .replace(/\/$/, "")
+}
+
 export function slugifyFilePath(fp: FilePath, excludeExt?: boolean): FullSlug {
   fp = _stripSlashes(fp) as FilePath
   let ext = _getFileExtension(fp)
@@ -51,11 +65,7 @@ export function slugifyFilePath(fp: FilePath, excludeExt?: boolean): FullSlug {
     ext = ""
   }
 
-  let slug = withoutFileExt
-    .split("/")
-    .map((segment) => segment.replace(/\s/g, "-").replace(/%/g, "-percent").replace(/\?/g, "-q")) // slugify all segments
-    .join("/") // always use / as sep
-    .replace(/\/$/, "") // remove trailing slash
+  let slug = sluggify(withoutFileExt)
 
   // treat _index as index
   if (_endsWith(slug, "_index")) {
@@ -117,7 +127,8 @@ const _rebaseHastElement = (
   }
 }
 
-export function normalizeHastElement(el: HastElement, curBase: FullSlug, newBase: FullSlug) {
+export function normalizeHastElement(rawEl: HastElement, curBase: FullSlug, newBase: FullSlug) {
+  const el = clone(rawEl) // clone so we dont modify the original page
   _rebaseHastElement(el, "src", curBase, newBase)
   _rebaseHastElement(el, "href", curBase, newBase)
   if (el.children) {
@@ -156,14 +167,10 @@ export function splitAnchor(link: string): [string, string] {
   return [fp, anchor]
 }
 
-export function slugAnchor(anchor: string) {
-  return slug(anchor)
-}
-
 export function slugTag(tag: string) {
   return tag
     .split("/")
-    .map((tagSegment) => slug(tagSegment))
+    .map((tagSegment) => sluggify(tagSegment))
     .join("/")
 }
 

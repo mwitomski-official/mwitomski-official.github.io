@@ -25,6 +25,10 @@ const DEFAULT_SANS_SERIF =
   '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif'
 const DEFAULT_MONO = "ui-monospace, SFMono-Regular, SF Mono, Menlo, monospace"
 
+const CUSTOM_SANS_SERIF =
+  'ui-sans-serif, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica", "Arial", "Segoe UI", "Inter", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;'
+const CUSTOM_MONO = 'Menlo, SFMono-Regular, Consolas, "Roboto Mono", "Source Code Pro", monospace;'
+
 export function googleFontHref(theme: Theme) {
   const { code, header, body } = theme.typography
   return `https://fonts.googleapis.com/css2?family=${code}&family=${header}:wght@400;700&family=${body}:ital,wght@0,400;0,600;1,400;1,600&display=swap`
@@ -44,9 +48,9 @@ ${stylesheet.join("\n\n")}
   --tertiary: ${theme.colors.lightMode.tertiary};
   --highlight: ${theme.colors.lightMode.highlight};
 
-  --headerFont: "${theme.typography.header}", ${DEFAULT_SANS_SERIF};
-  --bodyFont: "${theme.typography.body}", ${DEFAULT_SANS_SERIF};
-  --codeFont: "${theme.typography.code}", ${DEFAULT_MONO};
+  --headerFont: "${theme.typography.header}", ${CUSTOM_SANS_SERIF};
+  --bodyFont: "${theme.typography.body}", ${CUSTOM_SANS_SERIF};
+  --codeFont: "${theme.typography.code}", ${CUSTOM_MONO};
 }
 
 :root[saved-theme="dark"] {
