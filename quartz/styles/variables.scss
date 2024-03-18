@@ -1,12 +1,9 @@
 $pageWidth: 750px;
 $mobileBreakpoint: 600px;
-$tabletBreakpoint: 1200px;
+$tabletBreakpoint: 1000px;
 $sidePanelWidth: 380px;
 $topSpacing: 6rem;
 $fullPageWidth: $pageWidth + 2 * $sidePanelWidth;
-
-// CUSTOM
-$radius-l: 12px;
-$scrollbar-active-thumb-bg: rgba(255, 255, 255, 0.2);
-$scrollbar-bg: rgba(255, 255, 255, 0.05);
-$scrollbar-thumb-bg: rgba(255, 255, 255, 0.1);
+$boldWeight: 700;
+$semiBoldWeight: 600;
+$normalWeight: 400;

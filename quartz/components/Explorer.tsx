@@ -1,4 +1,4 @@
-import { QuartzComponentConstructor, QuartzComponentProps } from "./types"
+import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
 import explorerStyle from "./styles/explorer.scss"
 
 // @ts-ignore
@@ -6,16 +6,12 @@ import script from "./scripts/explorer.inline"
 import { ExplorerNode, FileNode, Options } from "./ExplorerNode"
 import { QuartzPluginData } from "../plugins/vfile"
 import { classNames } from "../util/lang"
+import { i18n } from "../i18n"
 
 // Options interface defined in `ExplorerNode` to avoid circular dependency
 const defaultOptions = {
-  // Title of the explorer component
-  title: "Explorer",
-  // What happens when you click a folder ("link" to navigate to folder page on click or "collapse" to collapse folder on click)
   folderClickBehavior: "collapse",
-  // Default state of folders ("collapsed" or "open")
   folderDefaultState: "collapsed",
-  // Wether to use local storage to save "state" (which folders are opened) of explorer
   useSavedState: true,
   mapFn: (node) => {
     return node
@@ -79,7 +75,12 @@ export default ((userOpts?: Partial<Options>) => {
     jsonTree = JSON.stringify(folders)
   }
 
-  function Explorer({ allFiles, displayClass, fileData }: QuartzComponentProps) {
+  const Explorer: QuartzComponent = ({
+    cfg,
+    allFiles,
+    displayClass,
+    fileData,
+  }: QuartzComponentProps) => {
     constructFileTree(allFiles)
     return (
       <div class={classNames(displayClass, "explorer")}>
@@ -91,7 +92,7 @@ export default ((userOpts?: Partial<Options>) => {
           data-savestate={opts.useSavedState}
           data-tree={jsonTree}
         >
-          <h1>{opts.title}</h1>
+          <h1>{opts.title ?? i18n(cfg.locale).components.explorer.title}</h1>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="14"
