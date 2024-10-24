@@ -121,6 +121,7 @@ a {
 }
 
 .page {
+  // max-width: calc(#{map-get($breakpoints, desktop)} + 590px);
   max-width: calc(#{map-get($breakpoints, desktop)} + 300px);
   margin: 0 auto;
   & article {
@@ -182,7 +183,7 @@ a {
       gap: 2rem;
       top: 0;
       box-sizing: border-box;
-      padding: $topSpacing 2rem 2rem 2rem;
+      padding: $topSpacing 0 2rem 0;
       display: flex;
       height: 100vh;
       position: sticky;
@@ -192,6 +193,8 @@ a {
       z-index: 1;
       grid-area: grid-sidebar-left;
       flex-direction: column;
+      border-right: 1px solid #2e2e32;
+
       @media all and ($mobile) {
         gap: 0;
         align-items: center;
@@ -201,6 +204,7 @@ a {
         flex-direction: row;
         padding: 0;
         padding-top: 2rem;
+        border-right: 0px;
       }
     }
 
@@ -251,9 +255,9 @@ a {
     & .center,
     & footer {
       max-width: 100%;
-      min-width: 100%;
-      margin-left: auto;
-      margin-right: auto;
+      min-width: 90%;
+      margin-left: 16px;
+      margin-right: 16px;
       @media all and ($tablet) {
         margin-right: 0;
       }

@@ -15,7 +15,6 @@ interface RenderComponents {
   beforeBody: QuartzComponent[]
   afterBody: QuartzComponent[]
   pageBody: QuartzComponent
-  afterBody: QuartzComponent[]
   left: QuartzComponent[]
   right: QuartzComponent[]
   footer: QuartzComponent
@@ -182,6 +181,20 @@ export function renderPage(
   })
 
   // set componentData.tree to the edited html that has transclusions rendered
+  // Eg:
+  // {
+  //   filePath: 'docs/tags/component.md',
+  //   relativePath: 'tags/component.md',
+  //   slug: 'tags/component',
+  //   frontmatter: [Object],
+  //   dates: [Object],
+  //   blocks: {},
+  //   htmlAst: [Object],
+  //   links: [Array],
+  //   description: 'Want to create your own custom component? Check out the advanced guide on creating components for more information.',
+  //   text: 'Want to create your own custom component? Check out the advanced guide on creating components for more information.'
+  // },
+  
   componentData.tree = root
 
   const {
@@ -190,7 +203,6 @@ export function renderPage(
     beforeBody,
     afterBody,
     pageBody: Content,
-    afterBody,
     left,
     right,
     footer: Footer,
@@ -254,8 +266,6 @@ export function renderPage(
         .map((res) => JSResourceToScriptElement(res))}
     </html>
   )
-
-  debugger
 
   return "<!DOCTYPE html>\n" + render(doc)
 }
