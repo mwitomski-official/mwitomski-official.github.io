@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 import starlightPlugin from "@astrojs/starlight-tailwind";
-import colors from 'tailwindcss/colors';
+import colors from "tailwindcss/colors";
+import defaultTheme from "tailwindcss/defaultTheme";
 
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
@@ -14,7 +15,7 @@ export default {
       },
       fontFamily: {
         // Your preferred text font. Starlight uses a system font stack by default.
-        sans: ['"Atkinson Hyperlegible"'],
+        sans: ['"Consolas"', ...defaultTheme.fontFamily.sans],
         // Your preferred code font. Starlight uses system monospace fonts by default.
         mono: ['"IBM Plex Mono"'],
       },

@@ -3,13 +3,16 @@ import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 
 import tailwind from "@astrojs/tailwind";
-import starlightSiteGraph from 'starlight-site-graph'
+import starlightThemeObsidian from "starlight-theme-obsidian";
 
 // https://astro.build/config
 export default defineConfig({
   integrations: [
     starlight({
       title: "ORION",
+      logo: {
+        src: './src/assets/Orion.svg'
+      },
       customCss: [
         // Path to your Tailwind base styles:
         "./src/styles/tailwind.css",
@@ -22,6 +25,8 @@ export default defineConfig({
         codePen: "https://google.pl",
       },
       sidebar: [
+        // A single link item labelled “Home”.
+        { label: "Welcome", slug: "home/example" },
         {
           label: "Guides",
           items: [
@@ -34,6 +39,7 @@ export default defineConfig({
           autogenerate: { directory: "reference" },
         },
       ],
+      plugins: [starlightThemeObsidian()],
     }),
     tailwind({
       // Disable the default base styles:
