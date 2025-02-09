@@ -4,6 +4,7 @@ import starlight from "@astrojs/starlight";
 
 import tailwind from "@astrojs/tailwind";
 import starlightThemeObsidian from "starlight-theme-obsidian";
+import starlightImageZoom from "starlight-image-zoom";
 
 // https://astro.build/config
 export default defineConfig({
@@ -40,7 +41,7 @@ export default defineConfig({
           autogenerate: { directory: "reference" },
         },
       ],
-      plugins: [starlightThemeObsidian()],
+      plugins: [starlightThemeObsidian(), starlightImageZoom()],
     }),
     tailwind({
       // Disable the default base styles:

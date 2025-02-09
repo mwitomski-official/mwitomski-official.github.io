@@ -1,0 +1,31 @@
+{
+  "communityPluginSortOrder": "download",
+  "lineWrap": true,
+  "rightToLeft": false,
+  "spellcheck": true,
+  "readableLineLength": false,
+  "alwaysUpdateLinks": true,
+  "newFileLocation": "folder",
+  "newFileFolderPath": "/",
+  "attachmentFolderPath": "/",
+  "defaultViewMode": "source",
+  "legacyEditor": false,
+  "strictLineBreaks": false,
+  "showFrontmatter": false,
+  "showLineNumber": true,
+  "showUnsupportedFiles": true,
+  "pdfExportSettings": {
+    "includeName": true,
+    "pageSize": "A4",
+    "landscape": true,
+    "margin": "2",
+    "downscalePercent": 100
+  },
+  "newLinkFormat": "relative",
+  "userIgnoreFilters": [
+    "private/",
+    "templates/"
+  ],
+  "useMarkdownLinks": true,
+  "spellcheckLanguages": null
+}

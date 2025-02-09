@@ -1,0 +1,93 @@
+{
+  "confirmDeletion": false,
+  "showAddCommand": true,
+  "debug": false,
+  "editorMenu": [],
+  "fileMenu": [],
+  "leftRibbon": [
+    {
+      "id": "file-explorer:new-file",
+      "icon": "lucide-file-plus",
+      "name": "Create new note",
+      "mode": "any",
+      "color": "#7301fc"
+    },
+    {
+      "id": "global-search:open",
+      "icon": "lucide-search",
+      "name": "Search: Search in all files",
+      "mode": "any",
+      "color": "#7300fb"
+    },
+    {
+      "id": "file-explorer:open",
+      "icon": "lucide-files",
+      "name": "Files: Show file explorer",
+      "mode": "any",
+      "color": "#03c8fd"
+    },
+    {
+      "id": "switcher:open",
+      "icon": "lucide-navigation",
+      "name": "Quick switcher: Open quick switcher",
+      "mode": "any",
+      "color": "#02c8fd"
+    },
+    {
+      "id": "command-palette:open",
+      "icon": "lucide-terminal-square",
+      "name": "Command palette: Open command palette",
+      "mode": "any",
+      "color": "#004bf3"
+    },
+    {
+      "id": "graph:open-local",
+      "icon": "git-branch-plus",
+      "name": "Graph view: Open local graph",
+      "mode": "any",
+      "color": "#00dfe7"
+    },
+    {
+      "id": "graph:open",
+      "icon": "lucide-git-fork",
+      "name": "Graph view: Open graph view",
+      "mode": "any",
+      "color": "#00dfe7"
+    },
+    {
+      "id": "table-editor-obsidian:table-control-bar",
+      "icon": "table",
+      "name": "Advanced Tables: Open table controls toolbar",
+      "mode": "any",
+      "color": "#9500f3"
+    },
+    {
+      "id": "obsidian-excalidraw-plugin:excalidraw-autocreate-newtab",
+      "icon": "pen-tool",
+      "name": "Excalidraw: Create new drawing - IN A NEW TAB",
+      "mode": "any",
+      "color": "#9500f3"
+    }
+  ],
+  "rightRibbon": [],
+  "titleBar": [],
+  "statusBar": [],
+  "pageHeader": [],
+  "macros": [],
+  "explorer": [],
+  "hide": {
+    "statusbar": [],
+    "leftRibbon": []
+  },
+  "spacing": "8",
+  "advancedToolbar": {
+    "rowHeight": 48,
+    "rowCount": 1,
+    "spacing": 0,
+    "buttonWidth": 48,
+    "columnLayout": false,
+    "mappedIcons": [],
+    "tooltips": false,
+    "heightOffset": 0
+  }
+}

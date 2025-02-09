@@ -1,0 +1,11 @@
+{
+  "cssTheme": "Atom",
+  "translucency": false,
+  "baseFontSizeAction": true,
+  "baseFontSize": 13,
+  "accentColor": "#031424",
+  "interfaceFontFamily": "",
+  "textFontFamily": "",
+  "monospaceFontFamily": "",
+  "nativeMenus": false
+}
