@@ -8,7 +8,7 @@ import starlightImageZoom from "starlight-image-zoom";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://mwitomski-official.github.io"
+  site: "https://mwitomski-official.github.io",
   integrations: [
     starlight({
       title: "ORION",
