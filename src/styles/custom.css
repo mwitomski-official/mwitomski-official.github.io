@@ -1,0 +1,21 @@
+.site-title.sl-flex {
+  & img {
+    max-height: 120px;
+    border-radius: 150px;
+  }
+}
+
+.sidebar-top .site-title.sl-flex {
+  padding: 10px;
+  margin: 10px;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar-top .site-title.sl-flex {
+    justify-content: left;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+  }
+}

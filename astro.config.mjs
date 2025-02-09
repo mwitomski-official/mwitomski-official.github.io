@@ -11,7 +11,8 @@ export default defineConfig({
     starlight({
       title: "ORION",
       logo: {
-        src: './src/assets/Orion.svg'
+        src: "./src/assets/Orion.svg",
+        alt: "Orion site logo",
       },
       customCss: [
         // Path to your Tailwind base styles:
