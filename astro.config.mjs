@@ -32,21 +32,6 @@ export default defineConfig({
         github: "https://github.com/mwitomski-official",
         codePen: "https://google.pl",
       },
-      sidebar: [
-        // A single link item labelled “Home”.
-        { label: "Welcome", slug: "home/example" },
-        {
-          label: "Guides",
-          items: [
-            // Each item here is one entry in the navigation menu.
-            { label: "Example Guide", slug: "guides/example" },
-          ],
-        },
-        {
-          label: "Reference",
-          autogenerate: { directory: "reference" },
-        },
-      ],
       plugins: [starlightThemeObsidian(), starlightImageZoom()],
     }),
     tailwind({
