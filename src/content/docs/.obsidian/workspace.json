@@ -11,10 +11,24 @@
             "id": "346c6a3808ac9b23",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "reference/Test.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Test"
             }
           }
         ]
@@ -172,5 +186,8 @@
     }
   },
   "active": "346c6a3808ac9b23",
-  "lastOpenFiles": []
+  "lastOpenFiles": [
+    "reference/example.md",
+    "reference/Cornell.md"
+  ]
 }
