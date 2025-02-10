@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "45415171f6a091a5",
+        "id": "349be8461adeff18",
         "type": "tabs",
         "children": [
           {
-            "id": "dcf039435c6b8881",
+            "id": "1fe305ff7b9c270d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "reference/DOG.md",
+                "file": "reference/Test.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "DOG"
+              "title": "Test"
             }
           }
         ]
@@ -104,6 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "reference/Test.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +114,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for Test"
             }
           },
           {
@@ -137,12 +138,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "reference/Test.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of Test"
             }
           },
           {
@@ -155,12 +157,28 @@
               "title": "Calendar"
             }
           }
+        ],
+        "currentTab": 1
+      },
+      {
+        "id": "eeac4bc49e54cd6b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "dcf039435c6b8881",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
+          }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -185,11 +203,11 @@
       "cmdr:Excalidraw: Create new drawing - IN A NEW TAB": false
     }
   },
-  "active": "dcf039435c6b8881",
+  "active": "1fe305ff7b9c270d",
   "lastOpenFiles": [
+    "reference/DOG.md",
     "guides/CAT.md",
     "home/example.md",
-    "reference/DOG.md",
     "reference/Test.md",
     "reference/Cornell.md"
   ]
