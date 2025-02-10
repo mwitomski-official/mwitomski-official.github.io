@@ -5,6 +5,11 @@ import starlight from "@astrojs/starlight";
 import tailwind from "@astrojs/tailwind";
 import starlightThemeObsidian from "starlight-theme-obsidian";
 import starlightImageZoom from "starlight-image-zoom";
+import rehypeAstroRelativeMarkdownLinks from "astro-rehype-relative-markdown-links";
+
+const options = {
+  collectionBase: false,
+};
 
 // https://astro.build/config
 export default defineConfig({
@@ -49,4 +54,7 @@ export default defineConfig({
       applyBaseStyles: false,
     }),
   ],
+  markdown: {
+    rehypePlugins: [[rehypeAstroRelativeMarkdownLinks, options]],
+  },
 });
