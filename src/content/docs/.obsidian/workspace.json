@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "reference/Test.md",
+                "file": "start/Index.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Test"
+              "title": "Index"
             }
           }
         ]
@@ -205,10 +205,35 @@
   },
   "active": "1fe305ff7b9c270d",
   "lastOpenFiles": [
-    "reference/DOG.md",
-    "guides/CAT.md",
+    "start/Index.md",
+    "angular/Yolo.md",
+    "angular/Yolo",
+    "angular/angular-intro.md",
+    "python/Test-1.md",
+    "python/python-intro.md",
+    "python/Test-1.mdx",
+    "python/Test1.mdx",
+    "start/Index.mdx",
+    "angular/angular-intro.mdx",
+    "python/python-intro.mdx",
+    "grammars/markdoc.tmLanguage.json",
+    "grammars",
+    "public",
+    "Python/Python Intro.md",
+    "python/[slug].md",
+    "python/Python Intro.md",
+    "python",
+    "angular/[slug].md",
+    "angular/Angular Intro.md",
+    "Angular/Angular Intro.md",
+    "stop/Q___Q.md",
+    "start/Note1.md",
+    "Start.md",
+    "start/Start.md",
     "home/example.md",
+    "guides/T2.md",
     "reference/Test.md",
+    "reference/T1.md",
     "reference/Cornell.md"
   ]
 }
